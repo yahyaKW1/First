@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Country Search</title>
+</head>
+<body>
+  <input type="text" id="countryName" placeholder="Enter country name">
+  <button onclick="searchCountry()">Search</button>
+
+  <div id="result"></div>
+
+  <script>
+    const backup = [
+      { name: "Egypt", capital: "Cairo", region: "Africa", flag: "🇪🇬" },
+      { name: "France", capital: "Paris", region: "Europe", flag: "🇫🇷" },
+      { name: "Japan", capital: "Tokyo", region: "Asia", flag: "🇯🇵" },
+      { name: "Brazil", capital: "Brasília", region: "Americas", flag: "🇧🇷" },
+      { name: "Canada", capital: "Ottawa", region: "Americas", flag: "🇨🇦" },
+      { name: "Germany", capital: "Berlin", region: "Europe", flag: "🇩🇪" },
+      { name: "India", capital: "New Delhi", region: "Asia", flag: "🇮🇳" },
+      { name: "United States", capital: "Washington, D.C.", region: "Americas", flag: "🇺🇸" }
+    ];
+
+    function show(name, capital, region, flag) {
+      document.getElementById("result").innerHTML =
+        "<h2>" + flag + " " + name + "</h2>" +
+        "<p>Capital: " + capital + "</p>" +
+        "<p>Region: " + region + "</p>";
+    }
+
+    function searchCountry() {
+      const name = document.getElementById("countryName").value.trim();
+      const result = document.getElementById("result");
+      result.innerHTML = "Loading...";
+
+      fetch("https://restcountries.com/v3.1/name/" + encodeURIComponent(name))
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("not found");
+          }
+          return response.json();
+        })
+        .then(data => {
+          const c = data[0];
+          show(c.name.common, c.capital ? c.capital[0] : "N/A", c.region, c.flag);
+        })
+        .catch(() => {
+          const found = backup.find(c => c.name.toLowerCase().includes(name.toLowerCase()));
+          if (found && name !== "") {
+            show(found.name, found.capital, found.region, found.flag);
+          } else {
+            result.innerHTML = "Country not found";
+          }
+        });
+    }
+  </script>
+</body>
+</html>

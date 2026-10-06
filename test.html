@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 1. OUTER CONTAINER (holds the cards) */
+    .cl {
+      background-color: #e0e0e0;
+      padding: 1px; /* Space inside the gray container */
+      margin: 20px; /* Space outside the gray container */
+    }
+
+    /* 2. THE CARD BOX */
+    .six {
+        height: 100px; /* Height of the card */
+        width: 300px; /* Width of the card */
+      /* BORDER: The frame around the element */
+      border: 10px solid #333333; 
+      
+      /* PADDING: Space INSIDE the black border (pushes text away from border) */
+      padding: 30px; 
+      
+      /* MARGIN: Space OUTSIDE the black border (pushes other cards away) */
+      margin: 1px auto; 
+      
+      /* Visual styling */
+      background-color: #3d4b3d; /* Green background */
+      color: white;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cl">
+    <div class="six">
+      Card 1: Look at the green space around this text (PADDING), the thick line (BORDER), and the space pushing Card 2 down (MARGIN).
+    </div>
+
+    <div class="six">
+      Card 2: Change the numbers in the CSS above to see what breaks or moves!
+    </div>
+  </div>
+
+</body>
+</html>

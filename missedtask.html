@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="missedtask.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1 class="title"><span class="blue-text">Ready Go</span> Game</h1>
+        <p class="description">
+            Write a function that follow the below rule. Take the given number and light the corresponding circle.
+        </p>
+
+        <div class="section">
+            <div class="badge green-badge">Input</div>
+            <div class="input-box">
+                <label for="numberInput">Number</label>
+                <input type="number" id="numberInput" min="1" max="3" value="2">
+            </div>
+        </div>
+
+        <div class="section output-section">
+            <div class="badge blue-badge">Output</div>
+            <div class="circles-container">
+                <div class="circle-item">
+                    <div id="circle1" class="circle"></div>
+                    <span id="label1" class="circle-label">ready</span>
+                </div>
+                <div class="circle-item">
+                    <div id="circle2" class="circle"></div>
+                    <span id="label2" class="circle-label">steady</span>
+                </div>
+                <div class="circle-item">
+                    <div id="circle3" class="circle"></div>
+                    <span id="label3" class="circle-label">go</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="badge orange-badge">Notes</div>
+            <div class="notes-text">
+                Rule :<br>
+                1 ="Ready", 2 ="Steady", 3= "Go"
+            </div>
+        </div>
+    </div>
+
+    <script src="missedtask.js"></script>
+</body>
+</html>

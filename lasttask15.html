@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News</title>
+</head>
+<body>
+  <div id="navbar">
+    <button onclick="getNews('general')">General</button>
+    <button onclick="getNews('business')">Business</button>
+    <button onclick="getNews('health')">Health</button>
+    <button onclick="getNews('science')">Science</button>
+    <button onclick="getNews('sports')">Sports</button>
+    <button onclick="getNews('technology')">Technology</button>
+  </div>
+
+  <div id="news"></div>
+
+  <script>
+    const apiKey = "d3ecf73e7b77492e83849e0a497dda1d";
+
+    function getNews(category) {
+      const news = document.getElementById("news");
+      news.innerHTML = "Loading...";
+
+      const url = "https://newsapi.org/v2/top-headlines?country=us&category=" + category + "&apiKey=" + apiKey;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          if (data.status !== "ok") {
+            news.innerHTML = "Error: " + data.message;
+            return;
+
+          }
+
+          let html = "";
+          data.articles.forEach(article => {
+            html += "<h3>" + article.title + "</h3>";
+            html += "<p>" + (article.description || "") + "</p>";
+            html += "<a href='" + article.url + "' target='_blank'>Read more</a><hr>";
+          });
+          news.innerHTML = html;
+        })
+        .catch(error => {
+          news.innerHTML = "Request failed: " + error.message;
+        });
+    }
+
+    getNews("general");
+  </script>
+</body>
+</html>

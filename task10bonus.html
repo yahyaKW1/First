@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #555;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6 max-w-5xl mx-auto">
+
+    <!-- 1. HEADER -->
+    <header class="flex justify-between items-center py-4 border-b border-gray-100 mb-6">
+        <div class="text-xl font-bold tracking-wide">
+            <span class="text-sky-500">MODERNA</span>
+        </div>
+        <nav class="space-x-4 text-xs font-bold text-gray-700 uppercase">
+            <a href="#" class="hover:text-sky-500">Home</a>
+            <a href="#" class="hover:text-sky-500">Features</a>
+            <a href="#" class="hover:text-sky-500">Portfolio</a>
+            <a href="#" class="hover:text-sky-500">Blog</a>
+            <a href="#" class="hover:text-sky-500">Contact</a>
+        </nav>
+    </header>
+
+    <div class="relative w-full h-64 md:h-80 bg-gray-200 overflow-hidden mb-8">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Hero" class="w-full h-full object-cover" />
+        
+        <!-- Dark overlay card on right -->
+        <div class="absolute top-1/2 right-6 -translate-y-1/2 bg-black/80 text-white p-5 max-w-xs text-xs space-y-2">
+            <h2 class="text-sm font-bold uppercase tracking-wide">Modern Design</h2>
+            <p class="text-gray-300 leading-relaxed">
+                Duis fermentum auctor ligula ac malesuada. Mauris et metus odio, in pulvinar urna
+            </p>
+            <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-3 text-[10px] uppercase inline-block mt-1">
+                Learn More
+            </button>
+        </div>
+    </div>
+
+    <div class="text-center my-8">
+        <h1 class="text-xl md:text-2xl font-bold text-gray-700">
+            <span class="text-sky-500">Moderna</span> WordPress Business Theme
+        </h1>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        
+        <div class="bg-gray-50 flex flex-col justify-between pt-6 text-center border border-gray-100">
+            <div class="px-4 pb-6 space-y-2">
+                <div class="flex justify-center text-gray-500 mb-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xs font-bold text-gray-800">Fully responsive</h3>
+                <p class="text-[11px] text-gray-400 leading-tight">Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>
+            </div>
+            <a href="#" class="bg-sky-500 text-white text-[11px] font-medium py-2 hover:bg-sky-600">Learn more</a>
+        </div>
+
+        <div class="bg-gray-50 flex flex-col justify-between pt-6 text-center border border-gray-100">
+            <div class="px-4 pb-6 space-y-2">
+                <div class="flex justify-center text-gray-500 mb-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </div>
+                <h3 class="text-xs font-bold text-gray-800">Modern Style</h3>
+                <p class="text-[11px] text-gray-400 leading-tight">Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>
+            </div>
+            <a href="#" class="bg-sky-500 text-white text-[11px] font-medium py-2 hover:bg-sky-600">Learn more</a>
+        </div>
+
+        <div class="bg-gray-50 flex flex-col justify-between pt-6 text-center border border-gray-100">
+            <div class="px-4 pb-6 space-y-2">
+                <div class="flex justify-center text-gray-500 mb-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 012.828 0L20.5 5.828a2 2 0 010 2.828l-7.928 7.928a1 1 0 01-.426.255l-3.327.951.951-3.327a1 1 0 01.255-.426L16.586 2.586z"></path></svg>
+                </div>
+                <h3 class="text-xs font-bold text-gray-800">Customizable</h3>
+                <p class="text-[11px] text-gray-400 leading-tight">Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>
+            </div>
+            <a href="#" class="bg-sky-500 text-white text-[11px] font-medium py-2 hover:bg-sky-600">Learn more</a>
+        </div>
+
+        <div class="bg-gray-50 flex flex-col justify-between pt-6 text-center border border-gray-100">
+            <div class="px-4 pb-6 space-y-2">
+                <div class="flex justify-center text-gray-500 mb-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-xs font-bold text-gray-800">Valid HTML5</h3>
+                <p class="text-[11px] text-gray-400 leading-tight">Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>
+            </div>
+            <a href="#" class="bg-sky-500 text-white text-[11px] font-medium py-2 hover:bg-sky-600">Learn more</a>
+        </div>
+
+    </div>
+
+    <div class="space-y-3">
+        <h2 class="text-sm font-bold text-gray-700">Recent Works</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=300&q=80" alt="Work 1" class="w-full h-28 object-cover border border-gray-200" />
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=300&q=80" alt="Work 2" class="w-full h-28 object-cover border border-gray-200" />
+            <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=300&q=80" alt="Work 3" class="w-full h-28 object-cover border border-gray-200" />
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=300&q=80" alt="Work 4" class="w-full h-28 object-cover border border-gray-200" />
+        </div>
+    </div>
+
+</body>
+</html>
